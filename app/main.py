@@ -7,4 +7,4 @@ app.include_router(router)
 
 @app.get("/")
 def root():
-    return {"message": "API is running successfully"}
+    return {"message": "API is running successfully now"}
