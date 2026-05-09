@@ -19,4 +19,4 @@ def root():
 def secure(x_token: str = Header(None)):
     if x_token != SECRET_TOKEN:
         raise HTTPException(status_code=401, detail="Unauthorized")
-    return {"message": "Access granted"}
+    return {"message": "Access not granted"}
