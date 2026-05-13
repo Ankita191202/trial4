@@ -13,7 +13,7 @@ app.include_router(router)
 
 @app.get("/")
 def root():
-return {"message": "API is running"}
+    return {"message": "API is running not properly"}
 
 @app.get("/secure")
 def secure(x_token: str = Header(None)):
