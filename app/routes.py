@@ -6,4 +6,4 @@ router = APIRouter()
 @router.get("/add")
 def add(a: int, b: int):
     result = add_numbers(a, b)
-    return {"result": result}
+    return {"result1": result}

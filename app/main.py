@@ -6,5 +6,5 @@ app = FastAPI()
 app.include_router(router)
 
 @app.get("/")
-def root():
-    return {"message": "API is running trial1"}
+def root()
+return {"message": "API is running trial1"}
