@@ -7,3 +7,4 @@ router = APIRouter()
 def add(a: int, b: int):
     result = add_numbers(a, b)
     return {"result": result}
+
