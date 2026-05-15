@@ -56,7 +56,7 @@ def list_error():
 
 @app.get("/dict")
 def dict_error():
-    data = {"name": "Ankita"}
+    data = {"name": "Ankita Dey"}
     try:
         age = data["age"]
     except KeyError:

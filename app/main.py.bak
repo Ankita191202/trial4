@@ -55,10 +55,10 @@ def list_error():
 
 
 @app.get("/dict")
-def dict_error():
-    data = {"name": "Ankita"}
+def dict_error()
+    data = {"name": "Ankita Dey"}
     try:
         age = data["age"]
     except KeyError:
         return {"error": "Key 'age' not found in dictionary"}
-    return {"age" age}
+    return {"age": age}
