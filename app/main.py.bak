@@ -1,0 +1,51 @@
+# from fastapi import FastAPI
+# from app.routes import router
+
+# app = FastAPI()
+
+# app.include_router(router)
+
+# @app.get("/")
+# def root():
+#     return {"message": "API is running trial2"}
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def root():
+    return {"message": "Server running"}
+
+
+
+@app.get("/divide")
+def divide():
+    return {"result": 10 / 0}
+
+
+
+@app.get("/debug")
+def debug():
+    return {"value": x}
+
+
+
+@app.get("/concat")
+def concat():
+    a = 10
+    return {"result": a + "hello"}
+
+
+
+@app.get("/list")
+def list_error():
+    arr = [1, 2, 3]
+    return {"value": arr[10]}
+
+
+
+@app.get("/dict")
+def dict_error():
+    data = {"name": "Ankita"}
+    return {"age": data["age"]}
