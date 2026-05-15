@@ -21,12 +21,17 @@ def root():
 
 @app.get("/divide")
 def divide():
-    return {"result": 10 / 0}
+    try:
+        result = 10 / 0
+    except ZeroDivisionError:
+        return {"error": "Cannot divide by zero"}
+    return {"result": result}
 
 
 
 @app.get("/debug")
 def debug():
+    x = 42
     return {"value": x}
 
 
@@ -34,18 +39,26 @@ def debug():
 @app.get("/concat")
 def concat():
     a = 10
-    return {"result": a + "hello"}
+    return {"result": str(a) + "hello"}
 
 
 
 @app.get("/list")
 def list_error():
     arr = [1, 2, 3]
-    return {"value": arr[10]}
+    try:
+        value = arr[10]
+    except IndexError:
+        return {"error": "List index out of range"}
+    return {"value": value}
 
 
 
 @app.get("/dict")
 def dict_error():
     data = {"name": "Ankita"}
-    return {"age": data["age"]}
+    try:
+        age = data["age"]
+    except KeyError:
+        return {"error": "Key 'age' not found in dictionary"}
+    return {"age" age}
