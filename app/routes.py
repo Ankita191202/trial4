@@ -34,20 +34,14 @@ router = APIRouter()
 
 @router.get("/add")
 def add(a: int, b: int):
-    
-    return {"result": multiply_numbers(a, b)}
+    return {"result": add_numbers(a, b)}
 
 @router.get("/multiply")
 def multiply(a: int, b: int):
-    
-    result = a / b
+    result = a * b
     return {"result": result}
 
 @router.get("/history")
 def history():
     data = get_history()
-
-    
-    data.clear()
-
     return {"history": data}
